@@ -6,6 +6,7 @@ class Song
 
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
+  include Paramable::InstanceMethods
 
   @@songs = []
 
@@ -25,7 +26,7 @@ class Song
     @artist = artist
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  #def to_param
+  #  name.downcase.gsub(' ', '-')
+  #end
 end
